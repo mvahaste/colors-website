@@ -12,6 +12,7 @@ input:focus {
 
 body {
     background-color: #0f0f0f;
+    overflow: overlay;
 }
 
 h1,
