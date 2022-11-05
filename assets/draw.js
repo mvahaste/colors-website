@@ -4,7 +4,7 @@
 let grid = document.getElementsByClassName("grid")[0];
 let gridSizeInput = document.getElementById("grid-size-input");
 let root = document.documentElement;
-var gridSize = 1;
+var gridSize = 4;
 
 function generateGrid() {
     // Kui gridSizeInput elemendil on / ei ole täisarvuline väärtus ja see on vahemikus 1-32-
