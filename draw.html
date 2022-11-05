@@ -14,13 +14,13 @@
     <div class="main">
         <div class="text">
             <h1>Draw</h1>
-            <p>Click on a square to fill it, click again to erase. Supports grid sizes 1–32, the default being 4.</p>
+            <p>Click on a square to toggle it, drag to toggle multiple. <br> Supports grid sizes 1–32, the default being 4.</p>
         </div>
-        <div class="grid rainbow">
+        <div class="grid rainbow" draggable="false">
         </div>
         <div class="interactives">
             <button onclick="location.href='index.html';" id="generate">Back</button>
-            <input type="number" placeholder="Grid size" id="grid-size-input">
+            <input type="number" placeholder="Grid size" id="grid-size-input" onkeydown="">
             <button onclick="generateGrid()">Generate</button>
         </div>
     </div>

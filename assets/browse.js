@@ -1,9 +1,13 @@
 // Autor: Mikk Vahaste
 //
 // Muutujad elementide jaoks
-var searchBar = document.getElementById("search");
-var grid = document.getElementsByClassName("grid-item");
-var noResultsText = document.getElementsByClassName("no-results")[0];
+let searchBar = document.getElementById("search");
+let grid = document.getElementsByClassName("grid-item");
+let noResultsText = document.getElementsByClassName("no-results")[0];
+
+// 
+// FUNKTSIOONID
+// 
 
 // Otsingufunktsioon
 function searchItems() {
@@ -26,6 +30,10 @@ function searchItems() {
         noResultsText.style.display = "none";
     }
 }
+
+// 
+// EVENTLISTENERID
+// 
 
 // Event listener, et käivitata funktsioon igal klahvivajutusel, et otsimine oleks automaatne
 searchBar.addEventListener("keyup", () => {

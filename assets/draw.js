@@ -1,10 +1,16 @@
 // Autor: Mikk Vahaste
 //
-// Muutujad elementide, gridi suuruse ja css jaoks
+// Muutujad elementide jne jaoks
 let grid = document.getElementsByClassName("grid")[0];
 let gridSizeInput = document.getElementById("grid-size-input");
 let root = document.documentElement;
-var gridSize = 4;
+let gridSize = 4;
+let mouseDown = false;
+let ignoreList = [];
+
+// 
+// FUNKTSIOONID
+// 
 
 function generateGrid() {
     // Kui gridSizeInput elemendil on / ei ole täisarvuline väärtus ja see on vahemikus 1-32-
@@ -26,8 +32,12 @@ function generateGrid() {
 
     // Korda gridSize^2 et grid ruut
     for (var i = 0; i < gridSize ** 2; i++) {
-        // Lisa div element gridi
-        grid.appendChild(document.createElement("div"));
+        // Tee uus div
+        let div = document.createElement("div");
+        // Anna sellele id
+        div.id = i
+        // Lisa div element grid-i
+        grid.appendChild(div);
     }
 
     // Muuda gridi column ja row repeat väärtust
@@ -45,14 +55,58 @@ function drawOnGrid(target) {
     }
 }
 
-// Genereeri esimene grid
-generateGrid()
+// 
+// EVENTLISTENERID
+// 
 
 // Kuula hiire vajutust
-document.body.addEventListener("click", (e) => {
-    // Kui vajutatud elemendi parentElement on grid
+document.body.addEventListener("mousedown", (e) => {
+    // Kui elemendi parent elemendi class on grid
     if (e.target.parentElement.className.includes("grid")) {
-        // Käivita funktsioon
+        // Joonista
         drawOnGrid(e.target);
+
+        // Lisa elemendi id ignoreList-i
+        ignoreList.push(e.target.id)
+
+        mouseDown = true;
     }
 });
+
+// Kuula hiire lahti laskmist
+document.body.addEventListener("mouseup", () => {
+    // Tühjenda ignoreList
+    ignoreList = []
+
+    mouseDown = false;
+});
+
+// Kuula hiire hover-it
+document.body.addEventListener("mouseover", (e) => {
+    if (e.target.parentElement.className.includes("grid")) {
+        // Kui elemendi id ei ole tühi ja ei ole ignoreList-is ja hiire nupp on alla vajutatud
+        if (e.target.id != "" && !ignoreList.includes(e.target.id) && mouseDown) {
+            // Joonista
+            drawOnGrid(e.target);
+
+            // Lisa elemendi id ignoreList-i
+            ignoreList.push(e.target.id)
+        }
+    }
+});
+
+// Kuula keyup eventi inputis
+gridSizeInput.addEventListener("keyup", (e) => {
+    // Kui nupp on enter-
+    if (e.key == "Enter") {
+        // -genereeri grid
+        generateGrid();
+    }
+});
+
+//
+// MUU
+//
+
+// Genereeri esimene grid
+generateGrid();
