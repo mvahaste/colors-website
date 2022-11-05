@@ -19,7 +19,7 @@ h1 {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
     gap: 25px;
-    width: 80vw;
+    width: 65vw;
     margin-inline: auto;
     padding-bottom: 35px;
 }
