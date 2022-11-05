@@ -23,6 +23,8 @@ input:focus {
 body {
     background-color: var(--bg-main);
     overflow: overlay;
+    width: 100vw;
+    height: 100vh;
 }
 
 h1,
