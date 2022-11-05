@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
+:root {
+    --bg-main: #0f0f0f;
+    --bg-sec: #222222;
+    --bg-ter: #3f3f3f;
+    --accent: #1e5eb6;
+    --error: #E53935;
+    --text: #ffffff;
+    --grid-size: 8;
+}
+
 * {
     margin: 0;
     font-family: 'Roboto', sans-serif;
@@ -11,13 +21,13 @@ input:focus {
 }
 
 body {
-    background-color: #0f0f0f;
+    background-color: var(--bg-main);
     overflow: overlay;
 }
 
 h1,
 p {
-    color: white;
+    color: var(--text);
 }
 
 h1 {
@@ -29,9 +39,9 @@ input {
     width: calc(min(50%, 500px));
     height: 40px;
     margin: 5px;
-    border: 1.5px solid #222222;
+    border: 1.5px solid var(--bg-sec);
     background-color: transparent;
-    color: white;
+    color: var(--text);
     font-size: 11pt;
     padding-inline: 20px;
 }
@@ -48,15 +58,19 @@ button {
     margin: 5px;
     border: none;
     text-align: center;
-    background-color: #222222;
-    color: white;
+    background-color: var(--bg-sec);
+    color: var(--text);
     font-weight: 450;
     font-size: 11pt;
 }
 
 button:hover {
     cursor: pointer;
-    background-color: #3f3f3f;
+    background-color: var(--bg-ter);
+}
+
+.text {
+    text-align: center;
 }
 
 /* width */
@@ -77,5 +91,26 @@ button:hover {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #3f3f3f;
+    background: var(--bg-ter);
+}
+
+.rainbow {
+    font-weight: bold;
+    background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #dd00f3, #dd00f3);
+    background-size: 1800% 1800%;
+    animation: rainbow 5s ease infinite;
+}
+
+@keyframes rainbow {
+    0% {
+        background-position: 0% 82%
+    }
+
+    50% {
+        background-position: 100% 19%
+    }
+
+    100% {
+        background-position: 0% 82%
+    }
 }

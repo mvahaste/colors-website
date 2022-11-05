@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+input {
+    width: 57px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.error {
+    border-color: var(--error) !important;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(var(--grid-size), 1fr);
+    grid-template-columns: repeat(var(--grid-size), 1fr);
+    gap: 1px;
+    height: 70vh;
+    width: 70vh;
+    margin-inline: auto;
+    padding: 1px;
+}
+
+.grid div {
+    background-color: var(--bg-main);
+    transition: all ease 0.2s;
+}
+
+.grid div::before {
+    content: "";
+    display: block;
+    height: 0;
+    width: 0;
+    padding-bottom: calc(1/1 * 100%);
+}
+
+.grid div:hover {
+    cursor: pointer;
+}
+
+.transparent {
+    background-color: transparent !important;
+}
