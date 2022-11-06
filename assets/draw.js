@@ -7,6 +7,8 @@ let root = document.documentElement;
 let gridSize = 4;
 let mouseDown = false;
 let ignoreList = [];
+let colorList = ["white", "red", "green", "blue", "rainbow"];
+let currentColor = 0;
 
 // 
 // FUNKTSIOONID
@@ -53,6 +55,22 @@ function drawOnGrid(target) {
         // -lisa class
         target.classList.add("transparent")
     }
+}
+
+function changeColor() {
+    // Suurenda värvi indeksit
+    currentColor += 1;
+
+    // Ära lase indeksil minna suuremaks kui colorList-i pikkus
+    if (currentColor >= colorList.length) {
+        currentColor = 0;
+    }
+
+    // Võta ära vana värv
+    grid.classList.remove(grid.classList[1]);
+
+    // Pane uus värv
+    grid.classList.add(colorList[currentColor]);
 }
 
 // 
