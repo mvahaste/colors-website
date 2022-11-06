@@ -40,7 +40,7 @@ input::-webkit-inner-spin-button {
 
 .grid div {
     background-color: var(--bg-main);
-    transition: all ease 0.2s;
+    transition: all ease 0.15s;
 }
 
 .grid div::before {
