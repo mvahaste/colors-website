@@ -4,6 +4,8 @@
     --bg-main: #0f0f0f;
     --bg-sec: #222222;
     --bg-ter: #3f3f3f;
+    --bg-for: #535353;
+    --button-click-border: #727272;
     --accent: #1e5eb6;
     --error: #E53935;
     --text: #ffffff;
@@ -64,11 +66,16 @@ button {
     color: var(--text);
     font-weight: 450;
     font-size: 11pt;
+    border: 1px solid transparent
 }
 
 button:hover {
     cursor: pointer;
     background-color: var(--bg-ter);
+}
+
+button:active {
+    background-color: var(--bg-for);
 }
 
 .text {
@@ -104,6 +111,10 @@ button:hover {
     animation: rainbow 5s ease infinite;
 }
 
+.animate-button-press {
+    animation: press 0.3s;
+}
+
 @keyframes rainbow {
     0% {
         background-position: 0% 82%
@@ -115,5 +126,19 @@ button:hover {
 
     100% {
         background-position: 0% 82%
+    }
+}
+
+@keyframes press {
+    0% {
+        border: 1px solid transparent;
+    }
+
+    25% {
+        border: 1px solid var(--button-click-border);
+    }
+
+    100% {
+        border: 1px solid transparent;
     }
 }
