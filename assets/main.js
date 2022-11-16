@@ -1,11 +1,11 @@
 // Autor: Mikk Vahaste
-// 
+//
 // Kõik nupud leheküljel
 buttons = document.getElementsByTagName("button");
 
 //
 // FUNKTSIOONID
-// 
+//
 
 function animateButtonClick(target) {
     // Võta ära animatsiooni class, vajalik kui kasutaja vajutab nuppu enne 250ms täis saamist
@@ -22,10 +22,12 @@ function animateButtonClick(target) {
 
 //
 // EVENTLISTENERID
-// 
+//
 
 // Käi üle kõikide nuppude
-for (var i = 0, button; button = buttons[i]; i++) {
+for (var i = 0, button; (button = buttons[i]); i++) {
     // Lisa igale nupule EventListener, kuula vajutust
-    button.addEventListener("click", (e) => { animateButtonClick(e.target) });
+    button.addEventListener("click", (e) => {
+        animateButtonClick(e.target);
+    });
 }

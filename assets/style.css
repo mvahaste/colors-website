@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 
 :root {
     --bg-main: #0f0f0f;
@@ -7,14 +7,14 @@
     --bg-for: #535353;
     --button-click-border: #727272;
     --accent: #1e5eb6;
-    --error: #E53935;
+    --error: #e53935;
     --text: #ffffff;
     --grid-size: 8;
 }
 
 * {
     margin: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 textarea:focus,
@@ -66,7 +66,7 @@ button {
     color: var(--text);
     font-weight: 450;
     font-size: 11pt;
-    border: 1px solid transparent
+    border: 1px solid transparent;
 }
 
 button:hover {
@@ -117,15 +117,15 @@ button:active {
 
 @keyframes rainbow {
     0% {
-        background-position: 0% 82%
+        background-position: 0% 82%;
     }
 
     50% {
-        background-position: 100% 19%
+        background-position: 100% 19%;
     }
 
     100% {
-        background-position: 0% 82%
+        background-position: 0% 82%;
     }
 }
 

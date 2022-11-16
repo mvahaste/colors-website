@@ -10,16 +10,16 @@ let ignoreList = [];
 let colorList = ["white", "red", "green", "blue", "rainbow"];
 let currentColor = 0;
 
-// 
+//
 // FUNKTSIOONID
-// 
+//
 
 function generateGrid() {
     // Kui gridSizeInput elemendil on / ei ole täisarvuline väärtus ja see on vahemikus 1-32-
     if (gridSizeInput.value.length != 0) {
         if (1 <= gridSizeInput.value && gridSizeInput.value <= 32 && Number.isInteger(Number(gridSizeInput.value))) {
             // -määra väärtus gridSize muutujale
-            gridSize = gridSizeInput.value
+            gridSize = gridSizeInput.value;
 
             // Võta ära error class, et border ei oleks punane
             gridSizeInput.classList.remove("error");
@@ -37,7 +37,7 @@ function generateGrid() {
         // Tee uus div
         let div = document.createElement("div");
         // Anna sellele id
-        div.id = i
+        div.id = i;
         // Lisa div element grid-i
         grid.appendChild(div);
     }
@@ -53,7 +53,7 @@ function drawOnGrid(target) {
         target.classList.remove("transparent");
     } else {
         // -lisa class
-        target.classList.add("transparent")
+        target.classList.add("transparent");
     }
 }
 
@@ -73,9 +73,9 @@ function changeColor() {
     grid.classList.add(colorList[currentColor]);
 }
 
-// 
+//
 // EVENTLISTENERID
-// 
+//
 
 // Kuula hiire vajutust
 document.body.addEventListener("mousedown", (e) => {
@@ -85,7 +85,7 @@ document.body.addEventListener("mousedown", (e) => {
         drawOnGrid(e.target);
 
         // Lisa elemendi id ignoreList-i
-        ignoreList.push(e.target.id)
+        ignoreList.push(e.target.id);
 
         mouseDown = true;
     }
@@ -94,7 +94,7 @@ document.body.addEventListener("mousedown", (e) => {
 // Kuula hiire lahti laskmist
 document.body.addEventListener("mouseup", () => {
     // Tühjenda ignoreList
-    ignoreList = []
+    ignoreList = [];
 
     mouseDown = false;
 });
@@ -108,7 +108,7 @@ document.body.addEventListener("mouseover", (e) => {
             drawOnGrid(e.target);
 
             // Lisa elemendi id ignoreList-i
-            ignoreList.push(e.target.id)
+            ignoreList.push(e.target.id);
         }
     }
 });

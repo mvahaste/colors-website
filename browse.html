@@ -1,88 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="assets/style.css" />
+        <link rel="stylesheet" href="assets/browse.css" />
+        <link rel="stylesheet" href="assets/colors.css" />
+        <title>Browse - Colors</title>
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/style.css">
-    <link rel="stylesheet" href="assets/browse.css">
-    <link rel="stylesheet" href="assets/colors.css">
-    <title>Browse - Colors</title>
-</head>
+    <body>
+        <h1>Browse</h1>
+        <div class="top">
+            <button onclick="location.href='index.html';">Back</button>
+            <input type="text" class="search" id="search" placeholder="Search colors by hex code or name" />
+        </div>
+        <div class="grid" id="grid">
+            <h2 class="no-results">No results :(</h2>
+            <div class="grid-item red">
+                <p>
+                    Red <br />
+                    #E53935
+                </p>
+            </div>
+            <div class="grid-item pink">
+                <p>
+                    Pink <br />
+                    #D81B60
+                </p>
+            </div>
+            <div class="grid-item purple">
+                <p>
+                    Purple <br />
+                    #9C27B0
+                </p>
+            </div>
+            <div class="grid-item deep-purple">
+                <p>
+                    Deep purple <br />
+                    #5E35B1
+                </p>
+            </div>
+            <div class="grid-item indigo">
+                <p>
+                    Indigo <br />
+                    #3949AB
+                </p>
+            </div>
+            <div class="grid-item blue">
+                <p>
+                    Blue <br />
+                    #1E88E5
+                </p>
+            </div>
+            <div class="grid-item light-blue">
+                <p>
+                    Light blue <br />
+                    #039BE5
+                </p>
+            </div>
+            <div class="grid-item cyan">
+                <p>
+                    Cyan <br />
+                    #00ACC1
+                </p>
+            </div>
+            <div class="grid-item teal">
+                <p>
+                    Teal <br />
+                    #00897B
+                </p>
+            </div>
+            <div class="grid-item green">
+                <p>
+                    Green <br />
+                    #43A047
+                </p>
+            </div>
+            <div class="grid-item light-green">
+                <p>
+                    Light green <br />
+                    #7CB342
+                </p>
+            </div>
+            <div class="grid-item lime">
+                <p>
+                    Lime <br />
+                    #C0CA33
+                </p>
+            </div>
+            <div class="grid-item yellow">
+                <p>
+                    Yellow <br />
+                    #FDD835
+                </p>
+            </div>
 
-<body>
-    <h1>Browse</h1>
-    <div class="top">
-        <button onclick="location.href='index.html';">Back</button>
-        <input type="text" class="search" id="search" placeholder="Search colors by hex code or name">
-    </div>
-    <div class="grid" id="grid">
-        <h2 class="no-results">No results :(</h2>
-        <div class="grid-item red">
-            <p>Red <br> #E53935</p>
+            <div class="grid-item amber">
+                <p>
+                    Amber <br />
+                    #FFB300
+                </p>
+            </div>
+            <div class="grid-item orange">
+                <p>
+                    Orange <br />
+                    #FB8C00
+                </p>
+            </div>
+            <div class="grid-item deep-orange">
+                <p>
+                    Deep orange <br />
+                    #F4511E
+                </p>
+            </div>
+            <div class="grid-item brown">
+                <p>
+                    Brown <br />
+                    #6D4C41
+                </p>
+            </div>
+            <div class="grid-item grey">
+                <p>
+                    Grey <br />
+                    #757575
+                </p>
+            </div>
+            <div class="grid-item blue-grey">
+                <p>
+                    Blue grey <br />
+                    #546E7A
+                </p>
+            </div>
+            <div class="grid-item rainbow">
+                <p>Rainbow</p>
+            </div>
         </div>
-        <div class="grid-item pink">
-            <p>Pink <br> #D81B60</p>
-        </div>
-        <div class="grid-item purple">
-            <p>Purple <br> #9C27B0</p>
-        </div>
-        <div class="grid-item deep-purple">
-            <p>Deep purple <br> #5E35B1</p>
-        </div>
-        <div class="grid-item indigo">
-            <p>Indigo <br> #3949AB</p>
-        </div>
-        <div class="grid-item blue">
-            <p>Blue <br> #1E88E5</p>
-        </div>
-        <div class="grid-item light-blue">
-            <p>Light blue <br> #039BE5</p>
-        </div>
-        <div class="grid-item cyan">
-            <p>Cyan <br> #00ACC1</p>
-        </div>
-        <div class="grid-item teal">
-            <p>Teal <br> #00897B</p>
-        </div>
-        <div class="grid-item green">
-            <p>Green <br> #43A047</p>
-        </div>
-        <div class="grid-item light-green">
-            <p>Light green <br> #7CB342</p>
-        </div>
-        <div class="grid-item lime">
-            <p>Lime <br> #C0CA33</p>
-        </div>
-        <div class="grid-item yellow">
-            <p>Yellow <br> #FDD835</p>
-        </div>
-
-        <div class="grid-item amber">
-            <p>Amber <br> #FFB300</p>
-        </div>
-        <div class="grid-item orange">
-            <p>Orange <br> #FB8C00</p>
-        </div>
-        <div class="grid-item deep-orange">
-            <p>Deep orange <br> #F4511E</p>
-        </div>
-        <div class="grid-item brown">
-            <p>Brown <br> #6D4C41</p>
-        </div>
-        <div class="grid-item grey">
-            <p>Grey <br> #757575</p>
-        </div>
-        <div class="grid-item blue-grey">
-            <p>Blue grey <br> #546E7A</p>
-        </div>
-        <div class="grid-item rainbow">
-            <p>Rainbow</p>
-        </div>
-    </div>
-    <script src="assets/main.js"></script>
-    <script src="assets/browse.js"></script>
-</body>
-
+        <script src="assets/main.js"></script>
+        <script src="assets/browse.js"></script>
+    </body>
 </html>

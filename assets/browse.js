@@ -5,9 +5,9 @@ let searchBar = document.getElementById("search");
 let grid = document.getElementsByClassName("grid-item");
 let noResultsText = document.getElementsByClassName("no-results")[0];
 
-// 
+//
 // FUNKTSIOONID
-// 
+//
 
 // Otsingufunktsioon
 function searchItems() {
@@ -31,11 +31,11 @@ function searchItems() {
     }
 }
 
-// 
+//
 // EVENTLISTENERID
-// 
+//
 
 // Event listener, et käivitata funktsioon igal klahvivajutusel, et otsimine oleks automaatne
 searchBar.addEventListener("keyup", () => {
-    searchItems()
+    searchItems();
 });
