@@ -1,33 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="assets/style.css" />
-        <link rel="stylesheet" href="assets/colors.css" />
-        <link rel="stylesheet" href="assets/draw.css" />
-        <title>Draw - Colors</title>
-    </head>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="assets/style.css" />
+		<link rel="stylesheet" href="assets/colors.css" />
+		<link rel="stylesheet" href="assets/draw.css" />
+		<title>Draw - Colors</title>
+	</head>
 
-    <body>
-        <div class="main">
-            <div class="text">
-                <h1>Draw</h1>
-                <p>
-                    Click on a square to toggle it, drag to toggle multiple. <br />
-                    Supports grid sizes 1–32, the default being 4.
-                </p>
-            </div>
-            <div class="grid white"></div>
-            <div class="interactives">
-                <button onclick="location.href='index.html';" id="generate">Back</button>
-                <input type="number" placeholder="Grid size" id="grid-size-input" onkeydown="" />
-                <button onclick="generateGrid()">Generate</button>
-                <button onclick="changeColor()">Change color</button>
-            </div>
-        </div>
-        <script src="assets/main.js"></script>
-        <script src="assets/draw.js"></script>
-    </body>
+	<body>
+		<div class="main">
+			<div class="text">
+				<h1>Draw</h1>
+				<p>
+					Click on a square to toggle it, drag to toggle multiple. <br />
+					Supports grid sizes 1–32, the default being 4.
+				</p>
+			</div>
+			<div class="grid white"></div>
+			<div class="interactives">
+				<button onclick="location.href='index.html';" id="generate">Back</button>
+				<input type="number" placeholder="Grid size" id="grid-size-input" onkeydown="" />
+				<button onclick="generateGrid()">Generate</button>
+				<button onclick="changeColor()">Change color</button>
+			</div>
+		</div>
+		<script src="assets/main.js"></script>
+		<script src="assets/draw.js"></script>
+	</body>
 </html>
