@@ -1,144 +1,144 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 
 :root {
-    --bg-main: #0f0f0f;
-    --bg-sec: #222222;
-    --bg-ter: #3f3f3f;
-    --bg-for: #535353;
-    --button-click-border: #727272;
-    --accent: #1e5eb6;
-    --error: #e53935;
-    --text: #ffffff;
-    --grid-size: 8;
+	--bg-main: #0f0f0f;
+	--bg-sec: #222222;
+	--bg-ter: #3f3f3f;
+	--bg-for: #535353;
+	--button-click-border: #727272;
+	--accent: #1e5eb6;
+	--error: #e53935;
+	--text: #ffffff;
+	--grid-size: 8;
 }
 
 * {
-    margin: 0;
-    font-family: "Roboto", sans-serif;
+	margin: 0;
+	font-family: "Roboto", sans-serif;
 }
 
 textarea:focus,
 input:focus {
-    outline: none;
+	outline: none;
 }
 
 body {
-    background-color: var(--bg-main);
-    overflow: overlay;
-    width: 100vw;
-    height: 100vh;
+	background-color: var(--bg-main);
+	overflow: overlay;
+	width: 100vw;
+	height: 100vh;
 }
 
 h1,
 p {
-    color: var(--text);
+	color: var(--text);
 }
 
 h1 {
-    font-size: 5em;
+	font-size: 5em;
 }
 
 input {
-    border-radius: 25px;
-    width: calc(min(50%, 500px));
-    height: 40px;
-    margin: 5px;
-    border: 1.5px solid var(--bg-sec);
-    background-color: transparent;
-    color: var(--text);
-    font-size: 11pt;
-    padding-inline: 20px;
+	border-radius: 25px;
+	width: calc(min(50%, 500px));
+	height: 40px;
+	margin: 5px;
+	border: 1.5px solid var(--bg-sec);
+	background-color: transparent;
+	color: var(--text);
+	font-size: 11pt;
+	padding-inline: 20px;
 }
 
 input:focus {
-    border: 1.5px solid #1e5eb6;
+	border: 1.5px solid #1e5eb6;
 }
 
 button {
-    border-radius: 25px;
-    width: fit-content;
-    padding-inline: 20px;
-    height: 45px;
-    margin: 5px;
-    border: none;
-    text-align: center;
-    background-color: var(--bg-sec);
-    color: var(--text);
-    font-weight: 450;
-    font-size: 11pt;
-    border: 1px solid transparent;
+	border-radius: 25px;
+	width: fit-content;
+	padding-inline: 20px;
+	height: 45px;
+	margin: 5px;
+	border: none;
+	text-align: center;
+	background-color: var(--bg-sec);
+	color: var(--text);
+	font-weight: 450;
+	font-size: 11pt;
+	border: 1px solid transparent;
 }
 
 button:hover {
-    cursor: pointer;
-    background-color: var(--bg-ter);
+	cursor: pointer;
+	background-color: var(--bg-ter);
 }
 
 button:active {
-    background-color: var(--bg-for);
+	background-color: var(--bg-for);
 }
 
 .text {
-    text-align: center;
-    max-width: 600px;
+	text-align: center;
+	max-width: 600px;
 }
 
 /* width */
 ::-webkit-scrollbar {
-    width: 10px;
+	width: 10px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: transparent;
+	background: transparent;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #292929;
-    border-radius: 5px;
+	background: #292929;
+	border-radius: 5px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--bg-ter);
+	background: var(--bg-ter);
 }
 
 .rainbow {
-    font-weight: bold;
-    background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #dd00f3, #dd00f3);
-    background-size: 1800% 1800%;
-    animation: rainbow 5s ease infinite;
+	font-weight: bold;
+	background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #dd00f3, #dd00f3);
+	background-size: 1800% 1800%;
+	animation: rainbow 5s ease infinite;
 }
 
 .animate-button-press {
-    animation: press 0.3s;
+	animation: press 0.3s;
 }
 
 @keyframes rainbow {
-    0% {
-        background-position: 0% 82%;
-    }
+	0% {
+		background-position: 0% 82%;
+	}
 
-    50% {
-        background-position: 100% 19%;
-    }
+	50% {
+		background-position: 100% 19%;
+	}
 
-    100% {
-        background-position: 0% 82%;
-    }
+	100% {
+		background-position: 0% 82%;
+	}
 }
 
 @keyframes press {
-    0% {
-        border: 1px solid transparent;
-    }
+	0% {
+		border: 1px solid transparent;
+	}
 
-    25% {
-        border: 1px solid var(--button-click-border);
-    }
+	25% {
+		border: 1px solid var(--button-click-border);
+	}
 
-    100% {
-        border: 1px solid transparent;
-    }
+	100% {
+		border: 1px solid transparent;
+	}
 }
