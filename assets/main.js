@@ -1,7 +1,7 @@
 // Autor: Mikk Vahaste
 //
 // Kõik nupud leheküljel
-buttons = document.getElementsByTagName("button");
+let buttons = document.getElementsByTagName("button");
 
 //
 // FUNKTSIOONID
