@@ -1,44 +1,44 @@
 .main {
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -55%);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+	position: absolute;
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%, -55%);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
 }
 
 .text {
-    text-align: center;
+	text-align: center;
 }
 
 a {
-    color: var(--text);
+	color: var(--text);
 }
 
 .bold {
-    font-weight: 450;
-    margin-top: 15px;
-    margin-bottom: 5px;
+	font-weight: 450;
+	margin-top: 15px;
+	margin-bottom: 5px;
 }
 
 .rainbow {
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
 @keyframes rainbow {
-    0% {
-        background-position: 0% 82%
-    }
+	0% {
+		background-position: 0% 82%;
+	}
 
-    50% {
-        background-position: 100% 19%
-    }
+	50% {
+		background-position: 100% 19%;
+	}
 
-    100% {
-        background-position: 0% 82%
-    }
+	100% {
+		background-position: 0% 82%;
+	}
 }
