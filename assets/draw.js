@@ -91,14 +91,6 @@ document.body.addEventListener("mousedown", (e) => {
 	}
 });
 
-// Kuula hiire lahti laskmist
-document.body.addEventListener("mouseup", () => {
-	// Tühjenda ignoreList
-	ignoreList = [];
-
-	mouseDown = false;
-});
-
 // Kuula hiire hover-it
 document.body.addEventListener("mouseover", (e) => {
 	if (e.target.parentElement.className.includes("grid")) {
@@ -111,6 +103,14 @@ document.body.addEventListener("mouseover", (e) => {
 			ignoreList.push(e.target.id);
 		}
 	}
+});
+
+// Kuula hiire lahti laskmist
+document.body.addEventListener("mouseup", () => {
+	// Tühjenda ignoreList
+	ignoreList = [];
+
+	mouseDown = false;
 });
 
 // Kuula keyup eventi inputis
