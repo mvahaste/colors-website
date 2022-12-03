@@ -34,6 +34,11 @@ Veebilehel on neli vahelehte:
   ![About](/preview/about.png)
 </details>
 
+<details>
+  <summary>Home</summary>
+  ![Home](/preview/home.png)
+</details>
+
 ### Rühma liikmetest
 
 Rühma liikmed on:
