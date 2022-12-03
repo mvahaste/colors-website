@@ -14,6 +14,11 @@ Veebilehel on neli vahelehte:
 - Draw - ruudustik, kus saab joonistada, värve ja suurust saab ka muuta
 - About - veidikene selgitust veebilehe kohta
 
+<details>
+  <summary>Home</summary>
+  ![Home](/preview/home.png)
+</details>
+
 ### Rühma liikmetest
 
 Rühma liikmed on:
