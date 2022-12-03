@@ -115,8 +115,8 @@ document.body.addEventListener("mouseover", (e) => {
 
 // Kuula keyup eventi inputis
 gridSizeInput.addEventListener("keydown", (e) => {
-	// Ära luba 'e' vajutamist
-	if (e.key == "e" || e.key == "E") {
+	// Ära luba 'e', miinuse, plussi ja koma vajutamist
+	if ("eE-+.".includes(e.key)) {
 		e.preventDefault();
 	}
 	// Kui nupp on enter-
