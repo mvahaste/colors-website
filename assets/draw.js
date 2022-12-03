@@ -114,7 +114,11 @@ document.body.addEventListener("mouseover", (e) => {
 });
 
 // Kuula keyup eventi inputis
-gridSizeInput.addEventListener("keyup", (e) => {
+gridSizeInput.addEventListener("keydown", (e) => {
+	// Ära luba 'e' vajutamist
+	if (e.key == "e" || e.key == "E") {
+		e.preventDefault();
+	}
 	// Kui nupp on enter-
 	if (e.key == "Enter") {
 		// -genereeri grid
