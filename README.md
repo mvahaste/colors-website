@@ -8,6 +8,12 @@ Ma teadsin, et tahan kasutada *grid*-i, ja idee tuli sellest, et alguses panin a
 
 Leht on inglise keeles, sest olen nii harjunud ja minu arvates näeb see ka parem välja.
 
+Veebilehel on neli vahelehte:
+- Home - lingid teistele vahelehtedele
+- Browse - enam-vähem responsive värvidega grid view koos otsinguga
+- Draw - ruudustik, kus saab joonistada, värve ja suurust saab ka muuta
+- About - veidikene selgitust veebilehe kohta
+
 ### Rühma liikmetest
 
 Rühma liikmed on:
